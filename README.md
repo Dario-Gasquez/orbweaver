@@ -31,5 +31,5 @@ import Orbweaver
 ```
 
 
-## Demo App
-*Work in progress*
+## Demo Apps
+In [DemoApps](https://github.com/Dario-Gasquez/orbweaver/tree/demo-app/DemoApps) you'll find a SwiftUI/Combine demo application (**OrbweaverSUI**) that shows how to integrate **Orbweaver**. It retrieves cat facts from https://catfact.ninja and shows them in a list.
