@@ -1,5 +1,5 @@
-# Orbweaver [Work in Progress]
-Orbweaver is a simple, Swift based, iOS networking library based un [URLSession](https://developer.apple.com/documentation/foundation/urlsession). It supports UIKit as well as SwiftUI/Combine based applications. For more information about the underlying design check:
+# Orbweaver
+Orbweaver is a simple, Swift based, iOS networking library that leverages [URLSession](https://developer.apple.com/documentation/foundation/urlsession). It supports UIKit as well as SwiftUI/Combine based applications. For more information about the underlying design check:
 [Orbweaver design](https://github.com/Dario-Gasquez/orbweaver/wiki).
  
 ## Requirements
@@ -14,13 +14,13 @@ Orbweaver is a simple, Swift based, iOS networking library based un [URLSession]
 ---
 
 **NOTE:**
-These instructions are based on Xcode 13
+These instructions are based on Xcode 13.4.1, the steps may deffer for different Xcode versions.
 
 ---
 
-1 . Open your project and add a package dependency by selecting: *File -> Swift Packages -> Add Package Dependency*
+1 . Open your project and add a package dependency as you prefer (for example: right click on the project -> *Add Packages* or from the project's *Package Dependencies* tab).
 
-2 . When asked about the repository paste the following URL:  
+2 . Paste the following in the package URL field:  
 `https://github.com/Dario-Gasquez/orbweaver`
 
 3 . Follow the instructions until the **Orbweaver** package is added to the project  
