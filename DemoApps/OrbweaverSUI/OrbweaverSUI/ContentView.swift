@@ -11,7 +11,15 @@ struct ContentView: View {
     var body: some View {
         Text("Hello, world!")
             .padding()
+            .onAppear {
+                catFactsService.fetchCatFactsData()
+            }
     }
+
+
+
+    // MARK: - Private Section -
+    @StateObject private var catFactsService = CatFactsService()
 }
 
 struct ContentView_Previews: PreviewProvider {
