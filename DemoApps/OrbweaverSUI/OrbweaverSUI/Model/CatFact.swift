@@ -7,12 +7,30 @@
 
 import Foundation
 
-struct CatFact: Decodable {
+struct CatFact: Decodable, Identifiable {
+    let id: UUID
     let fact: String
     let length: Int
+
+    enum CodingKeys: String, CodingKey {
+        case fact
+        case length
+    }
 }
 
 
+// MARK: - Decodable
+extension CatFact {
+    init(from decoder: Decoder) throws {
+        let container = try decoder.container(keyedBy: CodingKeys.self)
+        id = UUID()
+        fact = try container.decode(String.self, forKey: .fact)
+        length = try container.decode(Int.self, forKey: .length)
+    }
+}
+
+
+// MARK: - CustomDebugStringConvertible
 extension CatFact: CustomDebugStringConvertible {
     var debugDescription: String {
         let debugString =
@@ -21,6 +39,7 @@ extension CatFact: CustomDebugStringConvertible {
         - CatFact -------------------------------------
         fact: \(fact)
         length: \(length)
+        id: \(id)
         -----------------------------------------------
 
         """
